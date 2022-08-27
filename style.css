@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  color: rgb(31, 31, 31);
+}
+
+h2 {
+  color: rgb(31, 31, 31);
+}
+
+h3 {
+  color: rgb(31, 31, 31);
+}
+
+header {
+  height: 80px;
+  display: flex;
+  line-height: 80px;
+  /* ヘッダーにある文字の行間をヘッダーの高さと揃えると上下の中央揃えにできる */
+  justify-content: space-between;
+  padding: 0 180px;
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+header p {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(74, 74, 74);
+}
+
+header ul {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+}
+
+header a {
+  height: 60px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #00b5ad solid;
+}
+
+header a:hover {
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 181, 173, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 0 1.2em rgba(0, 0, 0, 0);
+  }
+}
+
+.firstView {
+  background-image: url(original-img/sea.JPG);
+  background-size: cover;
+  height: 800px;
+}
+
+.firstView h1 {
+  font-size: 64px;
+  text-align: center;
+  padding-top: 320px;
+  color: rgb(74, 74, 74);
+}
+
+.firstView p {
+  font-size: 14px;
+  text-align: center;
+  color: rgb(74, 74, 74);
+}
+
+.about {
+  padding: 180px;
+}
+
+.profile h2 {
+  font-size: 64px;
+  letter-spacing: 0.1em;
+  /* 文字の感覚を開ける */
+}
+
+.profile h3 {
+  font-size: 24px;
+  margin-top: 72px;
+  letter-spacing: 0.1em;
+}
+
+.profile p {
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.profile img {
+  width: 500px;
+  height: 300px;
+  margin-left: 100px;
+  object-fit: cover;
+  /* 比率固定のままトリミング */
+}
+
+.profile .profile-text {
+  width: 500px;
+  float: left;
+  /* 回りこまれるものにfloatをかける */
+}
+
+.clearfix {
+  clear: both;
+}
+
+.school-club {
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.school-club img {
+  width: 480px;
+  height: 270px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.school-club h3 {
+  margin-top: 8px;
+}
+
+.school-club p {
+  margin-top: 16px;
+}
+
+.school-club a {
+  display: inline-block;
+  border-bottom: 1px solid;
+  margin-top: 32px;
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: rgb(74, 74, 74);
+  text-decoration: none;
+  user-select: none;
+  border: 1px rgb(145, 145, 145) solid;
+  transition: 0.2s ease;
+}
+
+.school-club a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  content: "";
+  background-color: rgb(145, 145, 145);
+  transition: 0.2s ease;
+}
+
+.school-club a:hover {
+  color: #fff;
+}
+
+.school-club a:hover::before {
+  width: 100%;
+  background: rgb(145, 145, 145);
+}
+
+.favorite {
+  text-align: center;
+  padding: 180px 180px 240px 180px;
+  background-image: url(original-img/cloud.jpg);
+  background-size: cover;
+}
+
+.favorite h2 {
+  font-size: 64px;
+  text-align: center;
+  color: rgb(37, 37, 37);
+  letter-spacing: 0.1em;
+  border-bottom: 6px double #00b5ad;
+  display: inline-block;
+}
+
+.favorite-content {
+  padding: 40px;
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+}
+
+.favorite-content h3 {
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.favorite-content p {
+  font-size: 16px;
+  text-align-last: left;
+  margin-top: 32px;
+}
+
+.favorite-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.favorite-contents {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  /* flex box */
+}
+
+.works {
+  padding: 180px;
+  text-align: center;
+  background-color: #f3faff;
+}
+
+.works h2 {
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid #00b5ad;
+  display: inline-block;
+}
+
+.works-content {
+  display: flex;
+  /* flex 調べないと！ */
+  background-color: #fff;
+  margin-top: 40px;
+  padding: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.works-content img {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.works-content h3 {
+  font-size: 28px;
+}
+
+.works-content p {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.works-content span {
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+.works-content .works-text {
+  margin-left: 32px;
+}
+
+.contact {
+  padding: 180px 370px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 64px;
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid #00b5ad;
+  display: inline-block;
+}
+
+.contact p {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 200%;
+  /* line-heightは文字の大きさと行間を合わせた高さを指定する */
+  margin-top: 48px;
+  text-align: left;
+}
+
+.contact .sns {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact a {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #fff;
+  width: 200px;
+  line-height: 80px;
+  border-radius: 16px;
+}
+
+.contact a:hover {
+  background-color: #00b5ad;
+  transition: 0.2s;
+}
+
+.contact .sns-twitter {
+  background-color: #00acee;
+}
+
+.contact .sns-facebook {
+  background-color: #3b5998;
+}
+
+.contact .sns-instagram {
+  background-color: #da3f9e;
+}
+
+footer {
+  height: 80px;
+  line-height: 80px;
+  background-color: #e7ebed;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
